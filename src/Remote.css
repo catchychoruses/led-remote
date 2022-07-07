@@ -1,0 +1,57 @@
+.remoteWrapper {
+  border: 4px solid black;
+  border-radius: 6px;
+  background-color: aliceblue;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.677);
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.formContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+}
+
+.formContainer > div > button {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  padding: 5px;
+  margin: 8px;
+  border-radius: 100%;
+  border: 2px solid rgba(128, 128, 128, 0.476);
+  background-color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.formContainer > div:last-child {
+  border-radius: 0px 0px 10px 0px;
+  position: relative;
+}
+.formContainer > div:last-child::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  bottom: 65px;
+  right: 66px;
+  height: 7px;
+  width: 7px;
+}
+.formContainer > div:last-child::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  bottom: 66px;
+  right: 66px;
+  height: 10px;
+  width: 10px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 15px;
+}
