@@ -1,17 +1,19 @@
 import React from "react";
-import power from "./icons/power.svg"
+import MySvg from "./icons/index.js"
+
+const buttonSvg = MySvg;
 const buttonData = [
   {
     signal: "BRIGHTNESS_UP",
     bgColor: "white",
-    icon: "b_up.svg",
+    icon: `url(${buttonSvg.B_up})`,
     borderRadius: "10px 0px 0px 10px",
     marginBottom: "5px",
   },
   {
     signal: "BRIGHTNESS_DOWN",
     bgColor: "white",
-    icon: "b_down.svg",
+    icon: `url(${buttonSvg.B_down})`,
     borderRadius: "0px 10px 10px 0px",
     marginBottom: "5px",
     marginRight: "5px",
@@ -19,7 +21,7 @@ const buttonData = [
   {
     signal: "PLAY",
     bgColor: "black",
-    icon: "play.svg",
+    icon: `url(${buttonSvg.Play})`,
     borderRadius: "10px 0px 0px 10px",
     marginBottom: "5px",
     marginLeft: "5px",
@@ -27,105 +29,121 @@ const buttonData = [
   {
     signal: "POWER",
     bgColor: "red",
-    icon: `url(${power})`,
+    icon: `url(${buttonSvg.Power})`,
     borderRadius: "0px 10px 10px 0px",
     marginBottom: "5px",
   },
   {
     signal: "RED_0",
     bgColor: "red",
-    icon: "r.svg",
+    icon: `url(${buttonSvg.R})`,
     borderRadius: "10px 0px 0px 0px",
+    changeBg: true
   },
   {
     signal: "GREEN_0",
     bgColor: "#00B245",
-    icon: "g.svg",
+    icon: `url(${buttonSvg.G})`,
     borderRadius: "0px 0px 0px 0px",
+    changeBg: true
   },
   {
     signal: "BLUE_0",
     bgColor: "blue",
-    icon: "b.svg",
+    icon: `url(${buttonSvg.B})`,
     borderRadius: "0px 0px 0px 0px",
+    changeBg: true
   },
   {
     signal: "WHITE_0",
     bgColor: "white",
-    icon: "w.svg",
+    icon: `url(${buttonSvg.W})`,
     borderRadius: "0px 10px 0px 0px",
+    changeBg: true
   },
   {
     signal: "RED_1",
     bgColor: "#F46100",
     icon: "null",
     borderRadius: "0px 0px 0px 0px",
+    changeBg: true
   },
   {
     signal: "GREEN_1",
     bgColor: "#7FD339",
     icon: "null",
     borderRadius: "0px 0px 0px 0px",
+    changeBg: true
   },
   {
     signal: "BLUE_1",
     bgColor: "009BFF",
     icon: "null",
     borderRadius: "0px 0px 0px 0px",
+    changeBg: true
   },
   {
     signal: "WHITE_1",
     bgColor: "#FC88FF",
     icon: "null",
     borderRadius: "0px 0px 0px 0px",
+    changeBg: true
   },
   {
     signal: "RED_2",
     bgColor: "#FF3B48",
     icon: "null",
     borderRadius: "0px 0px 0px 0px",
+    changeBg: true
   },
   {
     signal: "GREEN_2",
     bgColor: "darkgreen",
     icon: "null",
     borderRadius: "0px 0px 0px 0px",
+    changeBg: true
   },
   {
     signal: "BLUE_2",
     bgColor: "#7B2AA5",
     icon: "null",
     borderRadius: "0px 0px 0px 0px",
+    changeBg: true
   },
   {
     signal: "WHITE_2",
     bgColor: "#FC88FF",
     icon: "null",
     borderRadius: "0px 0px 0px 0px",
+    changeBg: true
   },
   {
     signal: "RED_3",
     bgColor: "red",
     icon: "null",
     borderRadius: "0px 0px 0px 0px",
+    changeBg: true
   },
   {
     signal: "GREEN_3",
     bgColor: "darkgreen",
     icon: "null",
     borderRadius: "0px 0px 0px 0px",
+    changeBg: true
   },
   {
     signal: "BLUE_3",
     bgColor: "blue",
     icon: "null",
     borderRadius: "0px 0px 0px 0px",
+    changeBg: true
   },
   {
     signal: "WHITE_3",
     bgColor: "#6EBBE5",
     icon: "null",
     borderRadius: "0px 0px 0px 0px",
+    changeBg: true
   },
   {
     signal: "RED_4",
@@ -133,6 +151,7 @@ const buttonData = [
     icon: "null",
     borderRadius: "0px 0px 0px 10px",
     marginBottom: "5px",
+    changeBg: true
   },
   {
     signal: "GREEN_4",
@@ -140,6 +159,7 @@ const buttonData = [
     icon: "null",
     borderRadius: "0px 0px 0px 0px",
     marginBottom: "5px",
+    changeBg: true
   },
   {
     signal: "BLUE_4",
@@ -147,6 +167,7 @@ const buttonData = [
     icon: "null",
     borderRadius: "0px 0px 0px 0px",
     marginBottom: "5px",
+    changeBg: true
   },
   {
     signal: "WHITE_4",
@@ -154,23 +175,24 @@ const buttonData = [
     icon: "null",
     borderRadius: "0px 0px 10px 0px",
     marginBottom: "5px",
+    changeBg: true
   },
   {
     signal: "RED_UP",
     bgColor: "white",
-    icon: "null",
+    icon: `url(${buttonSvg.Red_up})`,
     borderRadius: "10px 0px 0px 0px",
   },
   {
     signal: "GREEN_UP",
     bgColor: "white",
-    icon: "null",
+    icon: `url(${buttonSvg.Green_up})`,
     borderRadius: "0px 0px 0px 0px",
   },
   {
     signal: "BLUE_UP",
     bgColor: "white",
-    icon: "null",
+    icon: `url(${buttonSvg.Blue_up})`,
     borderRadius: "0px 10px 0px 0px",
     marginRight: "5px",
   },
@@ -178,31 +200,32 @@ const buttonData = [
     signal: "QUICK",
     bgColor: "white",
     icon: "null",
+    text: true,
     borderRadius: "10px 10px 0px 0px",
   },
   {
     signal: "RED_DOWN",
     bgColor: "white",
-    icon: "null",
+    icon: `url(${buttonSvg.Red_down})`,
     borderRadius: "0px 0px 0px 0px",
   },
   {
     signal: "GREEN_DOWN",
     bgColor: "white",
-    icon: "null",
+    icon: `url(${buttonSvg.Green_down})`,
     borderRadius: "0px 0px 0px 0px",
   },
   {
     signal: "BLUE_DOWN",
     bgColor: "white",
-    icon: "null",
+    icon: `url(${buttonSvg.Blue_down})`,
     borderRadius: "0px 0px 0px 0px",
     marginRight: "5px",
   },
   {
     signal: "SLOW",
     bgColor: "white",
-    icon: "null",
+    text: true,
     borderRadius: "0px 0px 10px 10px",
     marginBottom: "5px",
   },
@@ -210,18 +233,21 @@ const buttonData = [
     signal: "DIY1",
     bgColor: "white",
     icon: "null",
+    text: true,
     borderRadius: "0px 0px 0px 0px",
   },
   {
     signal: "DIY2",
     bgColor: "white",
     icon: "null",
+    text: true,
     borderRadius: "0px 0px 0px 0px",
   },
   {
     signal: "DIY3",
     bgColor: "white",
     icon: "null",
+    text: true,
     borderRadius: "0px 0px 0px 0px",
     marginRight: "5px",
   },
@@ -229,12 +255,14 @@ const buttonData = [
     signal: "AUTO",
     bgColor: "white",
     icon: "null",
+    text: true,
     borderRadius: "10px 10px 0px 0px",
   },
   {
     signal: "DIY4",
     bgColor: "white",
     icon: "null",
+    text: true,
     borderRadius: "0px 0px 0px 10px",
     marginBottom: "5px",
   },
@@ -242,6 +270,7 @@ const buttonData = [
     signal: "DIY5",
     bgColor: "white",
     icon: "null",
+    text: true,
     borderRadius: "0px 0px 0px 0px",
     marginBottom: "5px",
   },
@@ -249,6 +278,7 @@ const buttonData = [
     signal: "DIY6",
     bgColor: "white",
     icon: "null",
+    text: true,
     borderRadius: "0px 0px 10px 0px",
     marginBottom: "5px",
     marginRight: "5px",
@@ -257,30 +287,35 @@ const buttonData = [
     signal: "FLASH",
     bgColor: "white",
     icon: "null",
+    text: true,
     borderRadius: "0px 0px 0px 0px",
   },
   {
     signal: "JUMP3",
     bgColor: "white",
     icon: "null",
+    text: true,
     borderRadius: "10px 0px 0px 10px",
   },
   {
     signal: "JUMP7",
     bgColor: "white",
     icon: "null",
+    text: true,
     borderRadius: "0px 0px 0px 0px",
   },
   {
     signal: "FADE3",
     bgColor: "white",
     icon: "null",
+    text: true,
     borderRadius: "0px 0px 0px 0px",
   },
   {
     signal: "FADE7",
     bgColor: "white",
     icon: "null",
+    text: true,
     borderRadius: "0px 0px 10px 0px",
   },
   /*"BRIGHTNESS_DOWN",
@@ -354,6 +389,7 @@ function LayoutButtons() {
       {buttonData.map((button) => {
         return (
           <div
+            key={button.signal}
             style={{
               backgroundColor: "black",
               borderRadius: button.borderRadius,
@@ -371,6 +407,7 @@ function LayoutButtons() {
               className="remoteButton"
               onClick={() => handleClick(button.signal)}
             >
+              { button.text && button.signal }
             </button>
           </div>
         );

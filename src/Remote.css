@@ -1,10 +1,12 @@
 .remoteWrapper {
+  position: relative;
   border: 4px solid black;
   border-radius: 6px;
   background-color: aliceblue;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.677);
   padding: 15px;
-  margin-top: 10px;
+  margin-top: 0.4em;
+  animation: fadeInDown 1s ease-in-out 0s forwards;
 }
 
 .formContainer {
@@ -12,24 +14,35 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
+  
+}
+.formContainer > div {
+  margin: -1px;
 }
 
 .formContainer > div > button {
   display: inline-block;
-  width: 45px;
-  height: 45px;
-  padding: 5px;
-  margin: 8px;
+  width: 3.5em;
+  height: 3.5em;
+  padding: 0;
+  margin: 0.6em;
   border-radius: 100%;
   border: 2px solid rgba(128, 128, 128, 0.476);
+  box-shadow: 0px 2px 4px rgba(94, 83, 83, 0.655);
   background-color: white;
-  font-weight: bold;
-  font-size: 1rem;
+  font-weight: 800;
+  font-size: 0.8rem;
   background-size: 30px;
   background-position: center;
   background-repeat: no-repeat;
+  transition: 0.2s;
 }
 
+.formContainer > div > button:hover { 
+  box-shadow: 0px 0px 10px rgba(205, 203, 203, 0.836);
+  transition: 0.2s;
+
+}
 
 .formContainer > div:last-child {
   border-radius: 0px 0px 10px 0px;
@@ -39,19 +52,42 @@
   content: "";
   position: absolute;
   background-color: black;
-  bottom: 65px;
+  bottom: 66px;
   right: 66px;
-  height: 7px;
-  width: 7px;
+  height: 5px;
+  width: 6px;
 }
 .formContainer > div:last-child::after {
   content: "";
   position: absolute;
-  background-color: white;
+  background-color: aliceblue;
   bottom: 66px;
   right: 66px;
-  height: 10px;
-  width: 10px;
+  height: 8px;
+  width: 8px;
   border-bottom-right-radius: 5px;
   border-top-left-radius: 15px;
+
+  
+}
+@media (min-width: 400px) {
+  .formContainer > div:last-child::after {
+  bottom: 66.5px;
+  right: 66px;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -15%, 0);
+      transform: translate3d(0, -15%, 0);
+  }
+
+  to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+  }
+
 }
