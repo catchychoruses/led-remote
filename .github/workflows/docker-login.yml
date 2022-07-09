@@ -2,7 +2,7 @@ name: docker-login
 
 on:
   push:
-    branches: main
+    branches: master
 
 jobs:
   login:
