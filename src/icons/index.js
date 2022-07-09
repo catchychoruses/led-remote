@@ -14,6 +14,8 @@ import Red_down from "./red_down.svg"
 import Green_Down from "./green_down.svg"
 
 
-export const MySvg = {
+ const MySvg = {
     B_up, B_down, Play, Power, R, G, B, W, Blue_down, Blue_up, Green_Down, Green_up, Red_up, Red_down
 }
+
+export default MySvg
